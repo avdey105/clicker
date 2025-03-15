@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="MobileOptimized" content="176">
+    <meta name="HandheldFriendly" content="True">
+    <title>Coin Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-background"></div>
+    <div class="bottom-nav">
+        <div class="nav-bg"></div>
+        <button class="nav-btn active" data-section="clicker">
+            <img src="assets/images/icon-clicker.png" alt="Кликер" class="nav-icon">
+        </button>
+        <button class="nav-btn" data-section="calendar">
+            <img src="assets/images/icon-calendar.png" alt="Календарь" class="nav-icon">
+        </button>
+        <button class="nav-btn" data-section="leaderboard">
+            <img src="assets/images/icon-leaderboard.png" alt="Топ игроков" class="nav-icon">
+        </button>
+    </div>
+
+    <div id="game-container">
+        <div id="top-bar">
+            <div class="top-bar-content">
+                <div id="coins-counter">
+                    <span id="coins-amount">0</span>
+                </div>
+                <div id="spinning-coin"></div>
+            </div>
+        </div>
+        
+        <div id="click-area">
+            <div class="rotating-background"></div>
+            <div id="click-animation">
+                <div class="click-mask"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro-video-container">
+        <div class="video-mask">
+            <video id="intro-video" 
+                playsinline 
+                preload="auto">
+                <source src="assets/videos/intro.mp4" type="video/mp4">
+            </video>
+        </div>
+        <button id="start-video" class="start-button" aria-label="Играть"></button>
+        <div class="intro-bottom-container">
+            <img src="assets/images/intro-bottom.png" alt="Skip intro" class="intro-bottom-image" id="skip-intro">
+        </div>
+    </div>
+
+    <audio id="tap-sound" src="assets/sounds/tap.mp3"></audio>
+    <audio id="fart-sound" src="assets/sounds/fart.mp3"></audio>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="scripts/game_logic.js"></script>
+
+    <div id="calendar-section" style="display: none; opacity: 0;">
+        <div class="calendar-top-container">
+            <div class="calendar-bg">
+                <div class="timer-content">
+                    <div id="calendar-image" class="calendar-image"></div>
+                    <div id="calendar-timer" class="calendar-timer">00:00:00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-image-container">
+            <div class="calendar-main-image"></div>
+        </div>
+
+        <div class="calendar-bottom-container">
+            <div class="calendar-bg">
+                <div class="total-coins-content">
+                    <span class="coins-label">Всего монет:</span>
+                    <span id="total-coins" class="total-coins-counter">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="leaderboard-section" style="display: none; opacity: 0;">
+        <div class="leaderboard-header">
+            <div class="leaderboard-banner-container">
+                <img src="assets/images/leaderboard-header.png" alt="Топ игроков" class="leaderboard-banner">
+            </div>
+        </div>
+        <div class="leaderboard-list-container">
+            <ul id="top-players" class="leaderboard-list">
+                <!-- Список игроков будет сгенерирован через JavaScript -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 
