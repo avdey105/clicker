@@ -46,15 +46,15 @@ ChupsCoin - это игра-кликер в Telegram, где пользоват�
 - `referral_code` - Уникальный реферальный код пользователя
 
 ### Зависимости
-- python-telegram-bot==13.15
-- urllib3==1.26.15
-- pytz>=2018.6
-- tornado>=6.1
-- APScheduler==3.6.3
-- cachetools==4.2.2
-- pandas>=1.3.0
-- openpyxl>=3.0.0
-- xlsxwriter>=3.0.0
+-python-telegram-bot==13.15
+-urllib3==1.26.15
+-pytz>=2018.6
+-tornado>=6.1
+-APScheduler==3.6.3
+-cachetools==4.2.2
+-pandas>=1.3.0
+-openpyxl>=3.0.0
+-xlsxwriter>=3.0.0 
 
 ## 🔧 Установка и запуск
 
