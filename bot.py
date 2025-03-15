@@ -16,7 +16,7 @@ WALLET_ADDRESS, CONFIRM_WALLET_CHANGE, ADMIN_PASSWORD, ADMIN_BROADCAST, ADMIN_US
 PROFILE, WALLET, REFERRAL = "profile", "wallet", "referral"
 
 # Пароль администратора
-ADMIN_PASSWORD_VALUE = "g2qsOFHo"
+ADMIN_PASSWORD_VALUE = "g23qsUFO"
 
 # Декоратор для управления соединением с базой данных
 def with_database(func):
@@ -403,7 +403,7 @@ def unknown_message(update: Update, context: CallbackContext) -> None:
 # Основная функция
 def main() -> None:
     setup_database()
-    updater = Updater("7340900787:AAEIpfluxj2xrOrNxFZPGY4xLMLmOREfxBU")
+    updater = Updater("АБРАКАДАБРА")
     dp = updater.dispatcher
     updater.bot.delete_webhook()
     dp.add_error_handler(lambda u, c: logger.error(f"Ошибка: {c.error}"))
